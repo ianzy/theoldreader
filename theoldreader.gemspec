@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["ian7zy@gmail.com"]
   gem.description   = %q{Ruby integrations for theoldreader API}
   gem.summary       = %q{Ruby integrations for theoldreader API}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/ianzy/theoldreader"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
