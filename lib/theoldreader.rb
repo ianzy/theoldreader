@@ -14,6 +14,12 @@ module Theoldreader
     Theoldreader::Config.token = token
   end
 
+  def self.fetch_token(email, password, app_name)
+    Theoldreader::API::Service.instance.make_request(:post, '', {client: app_name,
+      accountType: 'HOSTED_OR_GOOGLE', service: 'reader', Email: email, Passwd: password}, {},
+      {base_path: '/accounts/ClientLogin'}).body
+  end
+
   def self.status
     Theoldreader::Base.get({}, endpoint: 'status')
   end
