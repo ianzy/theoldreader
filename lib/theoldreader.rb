@@ -96,7 +96,7 @@ module Theoldreader
   end
 
   def self.stream(params = {})
-    filtered_params = filter_params(%w{i output}, params)
+    filtered_params = filter_params(%w{s xt n r c nt ot output}, params)
     Theoldreader::Base.get(filtered_params, endpoint: 'stream/contents')
   end
 
